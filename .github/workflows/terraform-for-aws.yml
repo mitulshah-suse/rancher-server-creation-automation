@@ -12,7 +12,7 @@ on:
         default: 'stable'
       name:
         description: 'Name tag of Instance'
-        default: vivek-rancher-server
+        default: mit-rancher-server
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,7 +24,6 @@ jobs:
       TF_VAR_BTPASSWORD: ${{ secrets.PASSWORD }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ID }}
-      PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
       AWS_REGION: 'us-east-2'
       TF_VAR_rancher_version: ${{ github.event.inputs.rancher_version }}
       TF_VAR_name: ${{ github.event.inputs.name }}
