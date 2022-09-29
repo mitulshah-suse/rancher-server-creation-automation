@@ -10,7 +10,7 @@ resource "aws_instance" "ec2-instance" {
   subnet_id                   = "subnet-6127e62d"
   security_groups             = [var.vpc_security_group_id_for_ec2]
   associate_public_ip_address = true
-  key_name                    = "mit-key-pair2"
+  key_name                    = "mit-pub-key-pair"
   #depends_on                  = [aws_key_pair.personal]
   ebs_block_device {
     device_name = "/dev/sda1"
